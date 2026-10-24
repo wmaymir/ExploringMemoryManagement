@@ -27,10 +27,10 @@ public class SphereHandler : MonoBehaviour
     private void Update()
     {
         //Debug.Log(lifetime);
+
         sphereRB.AddForce(transform.right * 0.5f * Time.deltaTime, ForceMode.Impulse);
     }
 
-    //puts it back in da pool
     private void BackToPool()
     {
         //Debug.Log("sent back to pool");

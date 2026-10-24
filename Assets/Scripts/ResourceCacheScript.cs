@@ -5,19 +5,19 @@ using UnityEngine;
 public class TextureLoader : MonoBehaviour
 {
 
-    //Make a texture dictionary to load them
+    //makes a texture dictionary to load them
     private Dictionary<string, Texture2D> loadedTextures = new Dictionary<string, Texture2D>();
 
     public Texture2D LoadTexture(string path)
     {
-        //check if the texture is already cached
+        //checks if the texture is already cached
         if (loadedTextures.TryGetValue(path, out Texture2D cachedTexture))
         {
-            //return the same thing isntead of doing all the stuff
+            //returns the same thing isntead of doing all the stuff
             return cachedTexture;
         }
 
-        //loads usign Unity's built in function
+        //loads using Unity's built-in function
         Texture2D texture = Resources.Load<Texture2D>(path);
 
         if (texture != null)

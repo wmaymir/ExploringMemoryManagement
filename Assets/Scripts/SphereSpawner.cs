@@ -40,21 +40,21 @@ public class SphereSpawner : MonoBehaviour
         return sphere;
     }
 
-    //activates the sphere when brought out da pool
     private void OnGetSphere(SphereHandler sphere)
     {
+        //activates the sphere when brought out da pool
         sphere.gameObject.SetActive(true);
     }
 
-    //deactivates the sphere when returned to da pool
     private void OnReleaseSphere(SphereHandler sphere)
     {
+        //deactivates the sphere when returned to da pool
         sphere.gameObject.SetActive(false);
     }
 
     private void OnDestroySphere(SphereHandler sphere)
     {
-        //happens when the pool is not availible anymore
+        //happens when the pool is not availible
         Destroy(sphere.gameObject);
     }
 
